@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="app">
+    {{message}}
+    <h1>{{name}}</h1>
+    <input type="button" v-on:click="update" value="更新" />
+  </div>
+  
+  <script src="./mini-vue.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        message: 'Hello Vue!',
+        name: 'test'
+      },
+      methods: {
+        update() {
+          this.name = 'cc'
+        }
+      },
+    })
+  </script>
+</body>
+</html>
